@@ -1,0 +1,21 @@
+{
+  "name": "erp-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start:gateway": "cd api-gateway && npm start",
+    "start:user": "cd services/user-service && npm start",
+    "start:tickets": "cd services/tickets-service && npm start",
+    "start:groups": "cd services/groups-service && npm start",
+    "dev:gateway": "cd api-gateway && npm run dev",
+    "dev:user": "cd services/user-service && npm run dev",
+    "dev:tickets": "cd services/tickets-service && npm run dev",
+    "dev:groups": "cd services/groups-service && npm run dev",
+    "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:user\" \"npm run dev:tickets\" \"npm run dev:groups\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "pg": "^8.20.0"
+  }
+}
